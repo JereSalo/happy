@@ -4,7 +4,7 @@ import { RealtimeVoiceSession } from './RealtimeVoiceSession';
 
 export const RealtimeProvider = ({ children }: { children: React.ReactNode }) => {
     return (
-        <ElevenLabsProvider>
+        <ElevenLabsProvider audioSessionConfig={{ allowMixingWithOthers: true }}>
             <RealtimeVoiceSession />
             {children}
         </ElevenLabsProvider>
